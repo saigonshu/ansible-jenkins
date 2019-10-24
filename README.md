@@ -30,6 +30,13 @@ although more ways can easily be added, PRs welcome).
 Installation
 ------------
 
+Install using ansible-playbook:
+
+```
+$ ansible-playbook -i emmetog.jenkins
+```
+
+
 Install using ansible galaxy:
 
 ```

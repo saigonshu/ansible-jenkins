@@ -1,0 +1,14 @@
+all:
+  hosts:
+    aplus_182:
+      ansible_host: 182.92.153.94
+      ansible_user: root
+      ansible_port: 22
+      ansible_ssh_private_key_file: inventories/id_rsa
+      ansible_python_interpreter: /usr/bin/python
+
+  children:
+
+    devops_servers:
+      hosts:
+        aplus_182:

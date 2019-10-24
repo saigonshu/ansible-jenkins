@@ -1,0 +1,8 @@
+---
+# include ams(*.war) xx_portal *.jar
+- hosts: devops_servers
+  roles:
+    - jenkins
+
+#- name: to run smoke test
+#  import_playbook: smoke.yml

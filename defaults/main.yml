@@ -4,7 +4,7 @@ jenkins_version: "2.73.1"  # The exact version of jenkins to deploy
 jenkins_url: "http://127.0.0.1"  # The url that Jenkins will be accessible on
 jenkins_port: "8080"  # The port that Jenkins will listen on
 jenkins_home: /data/jenkins  # The directory on the server where the Jenkins configs live
-jenkins_admin: "admin@example.com"  # The administrator email address for the server
+jenkins_admin: "shusaigang@apluslabs.com"  # The administrator email address for the server
 
 # If you need to override any java options then do that here.
 jenkins_java_opts: "-Djenkins.install.runSetupWizard=false"
@@ -14,7 +14,7 @@ jenkins_config_owner: "ubuntu"
 jenkins_config_group: "ubuntu"
 
 # The locations of the configuration files for jenkins
-jenkins_source_dir_configs: "{{ playbook_dir }}/jenkins-configs"
+jenkins_source_dir_configs: "{{ role_path }}/molecule/default/jenkins-configs"
 jenkins_source_dir_jobs: "{{ jenkins_source_dir_configs }}/jobs"
 
 # When defined, include this task file after configuring jobs. This happens
