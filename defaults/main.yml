@@ -47,6 +47,9 @@ jenkins_plugins:
   - workflow-multibranch
   - docker-workflow
   - template-project
+  - pipeline
+  - build-token-root
+  - build-token-trigger
 
 # How long to wait for installing plugins, in seconds. If you are seeing failures in the
 # "Wait for plugins to finish installing" task with an error message like "Timeout when
