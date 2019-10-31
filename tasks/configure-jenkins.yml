@@ -19,6 +19,14 @@
     owner: "{{ jenkins_config_owner }}"
     group: "{{ jenkins_config_group }}"
 
+- name: copy init_env.sh 
+  copy:
+    src: "{{ jenkins_source_dir_configs }}/init_env.sh"
+    dest: "{{ jenkins_home }}/init_env.sh"
+    mode: 0775
+    owner: "{{ jenkins_config_owner }}"
+    group: "{{ jenkins_config_group }}"
+
 - name: Configure Jenkins location
   template:
     src: files/jenkins.model.JenkinsLocationConfiguration.xml.j2

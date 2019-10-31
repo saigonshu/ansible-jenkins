@@ -5,10 +5,12 @@
     image: "{{ jenkins_docker_image }}:{{ jenkins_version }}"
     published_ports:
       - "{{ jenkins_port }}:8080"
+      - "50000:50000"
     volumes:
       - "{{ jenkins_home }}:/var/jenkins_home"
     env:
       JAVA_OPTS: "{{ jenkins_java_opts }}"
+#    command: docker exec {{ jenkins_docker_container_name }} source /var/jenkins_home/init_env.sh
   register: container_result
   when: jenkins_docker_expose_port
 

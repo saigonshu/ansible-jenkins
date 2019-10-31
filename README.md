@@ -320,6 +320,15 @@ or you want to add a new job the normal workflow is to make
 the change in the Jenkins UI
 first, then copy the resulting XML back into your VCS.
 
+
+configure webhook
+----------------------
+gitlab|aliyun code:  http supported only
+github:
+gitee: 
+ 
+
+
 License
 -------
 
@@ -328,10 +337,7 @@ MIT
 Author Information
 ------------------
 
-Made with love by Emmet O'Grady.
 
-I am the founder of [NimbleCI](https://nimbleci.com) which
-builds Docker containers for feature branch workflow projects in Github.
 
-I blog on my [personal blog](http://blog.emmetogrady.com) and
-about Docker related things on the [NimbleCI blog](https://blog.nimbleci.com).
+
+

@@ -1,10 +1,11 @@
-jenkins_version: "2.73.1"
+jenkins_version: "2.190.1"
 jenkins_url: http://182.92.153.94
 jenkins_port: 8880
-jenkins_install_via: "docker"
+jenkins_install_via: "apt"
 jenkins_jobs:
     - "my-first-job"
-    - "another-awesome-job"
+    - "aliyun-project"
+    - "aliyun-project-mvn"
 jenkins_include_secrets: true
 jenkins_include_custom_files: true
 jenkins_custom_files:

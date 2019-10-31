@@ -10,8 +10,8 @@ jenkins_admin: "shusaigang@apluslabs.com"  # The administrator email address for
 jenkins_java_opts: "-Djenkins.install.runSetupWizard=false"
 
 # Configuration files owner and group
-jenkins_config_owner: "ubuntu"
-jenkins_config_group: "ubuntu"
+jenkins_config_owner: "jenkins"
+jenkins_config_group: "jenkins"
 
 # The locations of the configuration files for jenkins
 jenkins_source_dir_configs: "{{ role_path }}/molecule/default/jenkins-configs"
@@ -26,7 +26,7 @@ jenkins_source_config_xml: "{{ jenkins_source_dir_configs }}/config.xml"
 
 # Include custom files for jenkins installation
 jenkins_include_custom_files: false
-jenkins_custom_files: {}  # src and dest names
+jenkins_custom_files:  {} # src and dest names
 
 # Include secrets directory during installation
 jenkins_include_secrets: false
@@ -38,13 +38,15 @@ jenkins_jobs: []
 # These plugins will be installed in the jenkins instance
 jenkins_plugins:
   - git
+  - maven
+  - gitee
+  - gitlab-hook
   - log-parser
   - copyartifact
   - workflow-aggregator
   - workflow-multibranch
   - docker-workflow
   - template-project
-  - ec2
 
 # How long to wait for installing plugins, in seconds. If you are seeing failures in the
 # "Wait for plugins to finish installing" task with an error message like "Timeout when
@@ -59,7 +61,7 @@ jenkins_custom_plugins: []
 ###################################################
 
 # The docker hub image name
-jenkins_docker_image: "jenkins/jenkins"
+jenkins_docker_image: "jenkinsci/blueocean"
 
 # Configs specific to the "docker" method of running jenkins
 # The name of the jenkins container
