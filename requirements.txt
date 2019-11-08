@@ -1,5 +1,5 @@
 -i https://pypi.org/simple
--e file:./maintenance/python_packages/python3/openiot
+-e maintenance/python_packages/python3/openiot
 ansible-lint==4.1.0
 ansible==2.8.1
 asn1crypto==0.24.0

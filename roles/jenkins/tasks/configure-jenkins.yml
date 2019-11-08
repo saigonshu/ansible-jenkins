@@ -48,3 +48,7 @@
     path: "{{ jenkins_home }}/secrets"
     mode: 0700
   when: jenkins_include_secrets
+
+- name: add permission for jenkins
+  become: yes 
+  command: "usermod -aG docker jenkins; usermod -aG root jenkins"
